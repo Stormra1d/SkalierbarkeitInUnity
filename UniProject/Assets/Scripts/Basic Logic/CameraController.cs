@@ -64,9 +64,9 @@ public class ThirdPersonCameraController : MonoBehaviour
     {
         // Calculate the zoom distance based on the sphere's current radius
         float sphereRadius = playerCollectibles.currentRadius;
-        float dynamicZoom = sphereRadius * zoomFactor;
+        float dynamicZoom = Mathf.Pow(sphereRadius * zoomFactor, 0.8f);
 
-        // Update the offset to adjust the camera distance
         offset = new Vector3(0, 5 + dynamicZoom, -10 - dynamicZoom);
+        orientation.position = player.position - player.forward * (dynamicZoom * 0.5f);
     }
 }

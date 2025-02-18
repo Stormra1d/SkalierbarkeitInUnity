@@ -8,7 +8,7 @@ public class StuckDetector : MonoBehaviour
     [SerializeField] private float stuckTimeThreshold = 2f;
     [SerializeField] private float minVelocity = 0.1f;
     [SerializeField] private float positionDeltaThreshold = 0.01f;
-    [SerializeField] private float recoveryForce = 5f;
+    [SerializeField] private float recoveryForce = 15f;
     [SerializeField] private float checkInterval = 0.5f;
 
     private Rigidbody rb;
